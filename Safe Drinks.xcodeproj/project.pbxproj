@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AF25654E1DEBAA9A00509228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25654D1DEBAA9A00509228 /* AppDelegate.swift */; };
+		AF2565501DEBAA9A00509228 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25654F1DEBAA9A00509228 /* ViewController.swift */; };
+		AF2565531DEBAA9A00509228 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2565511DEBAA9A00509228 /* Main.storyboard */; };
+		AF2565551DEBAA9A00509228 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF2565541DEBAA9A00509228 /* Assets.xcassets */; };
+		AF2565581DEBAA9A00509228 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2565561DEBAA9A00509228 /* LaunchScreen.storyboard */; };
+		AF2565631DEBAA9A00509228 /* Safe_DrinksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2565621DEBAA9A00509228 /* Safe_DrinksTests.swift */; };
+		AF25656E1DEBAA9A00509228 /* Safe_DrinksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25656D1DEBAA9A00509228 /* Safe_DrinksUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF25655F1DEBAA9A00509228 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF2565421DEBAA9900509228 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF2565491DEBAA9900509228;
+			remoteInfo = "Safe Drinks";
+		};
+		AF25656A1DEBAA9A00509228 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF2565421DEBAA9900509228 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF2565491DEBAA9900509228;
+			remoteInfo = "Safe Drinks";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AF25654A1DEBAA9A00509228 /* Safe Drinks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Safe Drinks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF25654D1DEBAA9A00509228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AF25654F1DEBAA9A00509228 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AF2565521DEBAA9A00509228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AF2565541DEBAA9A00509228 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF2565571DEBAA9A00509228 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AF2565591DEBAA9A00509228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF25655E1DEBAA9A00509228 /* Safe DrinksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Safe DrinksTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF2565621DEBAA9A00509228 /* Safe_DrinksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Safe_DrinksTests.swift; sourceTree = "<group>"; };
+		AF2565641DEBAA9A00509228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF2565691DEBAA9A00509228 /* Safe DrinksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Safe DrinksUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF25656D1DEBAA9A00509228 /* Safe_DrinksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Safe_DrinksUITests.swift; sourceTree = "<group>"; };
+		AF25656F1DEBAA9A00509228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF2565471DEBAA9900509228 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF25655B1DEBAA9A00509228 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF2565661DEBAA9A00509228 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AF2565411DEBAA9900509228 = {
+			isa = PBXGroup;
+			children = (
+				AF25654C1DEBAA9A00509228 /* Safe Drinks */,
+				AF2565611DEBAA9A00509228 /* Safe DrinksTests */,
+				AF25656C1DEBAA9A00509228 /* Safe DrinksUITests */,
+				AF25654B1DEBAA9A00509228 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AF25654B1DEBAA9A00509228 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF25654A1DEBAA9A00509228 /* Safe Drinks.app */,
+				AF25655E1DEBAA9A00509228 /* Safe DrinksTests.xctest */,
+				AF2565691DEBAA9A00509228 /* Safe DrinksUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF25654C1DEBAA9A00509228 /* Safe Drinks */ = {
+			isa = PBXGroup;
+			children = (
+				AF25654D1DEBAA9A00509228 /* AppDelegate.swift */,
+				AF25654F1DEBAA9A00509228 /* ViewController.swift */,
+				AF2565511DEBAA9A00509228 /* Main.storyboard */,
+				AF2565541DEBAA9A00509228 /* Assets.xcassets */,
+				AF2565561DEBAA9A00509228 /* LaunchScreen.storyboard */,
+				AF2565591DEBAA9A00509228 /* Info.plist */,
+			);
+			path = "Safe Drinks";
+			sourceTree = "<group>";
+		};
+		AF2565611DEBAA9A00509228 /* Safe DrinksTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF2565621DEBAA9A00509228 /* Safe_DrinksTests.swift */,
+				AF2565641DEBAA9A00509228 /* Info.plist */,
+			);
+			path = "Safe DrinksTests";
+			sourceTree = "<group>";
+		};
+		AF25656C1DEBAA9A00509228 /* Safe DrinksUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AF25656D1DEBAA9A00509228 /* Safe_DrinksUITests.swift */,
+				AF25656F1DEBAA9A00509228 /* Info.plist */,
+			);
+			path = "Safe DrinksUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF2565491DEBAA9900509228 /* Safe Drinks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF2565721DEBAA9A00509228 /* Build configuration list for PBXNativeTarget "Safe Drinks" */;
+			buildPhases = (
+				AF2565461DEBAA9900509228 /* Sources */,
+				AF2565471DEBAA9900509228 /* Frameworks */,
+				AF2565481DEBAA9900509228 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Safe Drinks";
+			productName = "Safe Drinks";
+			productReference = AF25654A1DEBAA9A00509228 /* Safe Drinks.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AF25655D1DEBAA9A00509228 /* Safe DrinksTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF2565751DEBAA9A00509228 /* Build configuration list for PBXNativeTarget "Safe DrinksTests" */;
+			buildPhases = (
+				AF25655A1DEBAA9A00509228 /* Sources */,
+				AF25655B1DEBAA9A00509228 /* Frameworks */,
+				AF25655C1DEBAA9A00509228 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF2565601DEBAA9A00509228 /* PBXTargetDependency */,
+			);
+			name = "Safe DrinksTests";
+			productName = "Safe DrinksTests";
+			productReference = AF25655E1DEBAA9A00509228 /* Safe DrinksTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AF2565681DEBAA9A00509228 /* Safe DrinksUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF2565781DEBAA9A00509228 /* Build configuration list for PBXNativeTarget "Safe DrinksUITests" */;
+			buildPhases = (
+				AF2565651DEBAA9A00509228 /* Sources */,
+				AF2565661DEBAA9A00509228 /* Frameworks */,
+				AF2565671DEBAA9A00509228 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF25656B1DEBAA9A00509228 /* PBXTargetDependency */,
+			);
+			name = "Safe DrinksUITests";
+			productName = "Safe DrinksUITests";
+			productReference = AF2565691DEBAA9A00509228 /* Safe DrinksUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF2565421DEBAA9900509228 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Allen, Ashwell, and Wells";
+				TargetAttributes = {
+					AF2565491DEBAA9900509228 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+					AF25655D1DEBAA9A00509228 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AF2565491DEBAA9900509228;
+					};
+					AF2565681DEBAA9A00509228 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AF2565491DEBAA9900509228;
+					};
+				};
+			};
+			buildConfigurationList = AF2565451DEBAA9900509228 /* Build configuration list for PBXProject "Safe Drinks" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AF2565411DEBAA9900509228;
+			productRefGroup = AF25654B1DEBAA9A00509228 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF2565491DEBAA9900509228 /* Safe Drinks */,
+				AF25655D1DEBAA9A00509228 /* Safe DrinksTests */,
+				AF2565681DEBAA9A00509228 /* Safe DrinksUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF2565481DEBAA9900509228 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF2565581DEBAA9A00509228 /* LaunchScreen.storyboard in Resources */,
+				AF2565551DEBAA9A00509228 /* Assets.xcassets in Resources */,
+				AF2565531DEBAA9A00509228 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF25655C1DEBAA9A00509228 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF2565671DEBAA9A00509228 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF2565461DEBAA9900509228 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF2565501DEBAA9A00509228 /* ViewController.swift in Sources */,
+				AF25654E1DEBAA9A00509228 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF25655A1DEBAA9A00509228 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF2565631DEBAA9A00509228 /* Safe_DrinksTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF2565651DEBAA9A00509228 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF25656E1DEBAA9A00509228 /* Safe_DrinksUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF2565601DEBAA9A00509228 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF2565491DEBAA9900509228 /* Safe Drinks */;
+			targetProxy = AF25655F1DEBAA9A00509228 /* PBXContainerItemProxy */;
+		};
+		AF25656B1DEBAA9A00509228 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF2565491DEBAA9900509228 /* Safe Drinks */;
+			targetProxy = AF25656A1DEBAA9A00509228 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AF2565511DEBAA9A00509228 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF2565521DEBAA9A00509228 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AF2565561DEBAA9A00509228 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF2565571DEBAA9A00509228 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AF2565701DEBAA9A00509228 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF2565711DEBAA9A00509228 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF2565731DEBAA9A00509228 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Safe Drinks/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.elon.cs.mobile.Safe-Drinks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AF2565741DEBAA9A00509228 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Safe Drinks/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.elon.cs.mobile.Safe-Drinks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		AF2565761DEBAA9A00509228 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Safe DrinksTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.elon.cs.mobile.Safe-DrinksTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Safe Drinks.app/Safe Drinks";
+			};
+			name = Debug;
+		};
+		AF2565771DEBAA9A00509228 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Safe DrinksTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.elon.cs.mobile.Safe-DrinksTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Safe Drinks.app/Safe Drinks";
+			};
+			name = Release;
+		};
+		AF2565791DEBAA9A00509228 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "Safe DrinksUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.elon.cs.mobile.Safe-DrinksUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Safe Drinks";
+			};
+			name = Debug;
+		};
+		AF25657A1DEBAA9A00509228 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "Safe DrinksUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.elon.cs.mobile.Safe-DrinksUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Safe Drinks";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF2565451DEBAA9900509228 /* Build configuration list for PBXProject "Safe Drinks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF2565701DEBAA9A00509228 /* Debug */,
+				AF2565711DEBAA9A00509228 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF2565721DEBAA9A00509228 /* Build configuration list for PBXNativeTarget "Safe Drinks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF2565731DEBAA9A00509228 /* Debug */,
+				AF2565741DEBAA9A00509228 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AF2565751DEBAA9A00509228 /* Build configuration list for PBXNativeTarget "Safe DrinksTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF2565761DEBAA9A00509228 /* Debug */,
+				AF2565771DEBAA9A00509228 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AF2565781DEBAA9A00509228 /* Build configuration list for PBXNativeTarget "Safe DrinksUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF2565791DEBAA9A00509228 /* Debug */,
+				AF25657A1DEBAA9A00509228 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF2565421DEBAA9900509228 /* Project object */;
+}
