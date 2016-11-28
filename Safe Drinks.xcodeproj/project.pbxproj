@@ -14,6 +14,10 @@
 		AF2565581DEBAA9A00509228 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2565561DEBAA9A00509228 /* LaunchScreen.storyboard */; };
 		AF2565631DEBAA9A00509228 /* Safe_DrinksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2565621DEBAA9A00509228 /* Safe_DrinksTests.swift */; };
 		AF25656E1DEBAA9A00509228 /* Safe_DrinksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25656D1DEBAA9A00509228 /* Safe_DrinksUITests.swift */; };
+		AF25657C1DEBB73F00509228 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25657B1DEBB73F00509228 /* User.swift */; };
+		AF2565841DEBC20E00509228 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2565831DEBC20E00509228 /* AddUserViewController.swift */; };
+		AF2565861DEBC23600509228 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2565851DEBC23600509228 /* HistoryViewController.swift */; };
+		AF2565881DEBC26300509228 /* BeginSafelyDrinkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2565871DEBC26300509228 /* BeginSafelyDrinkingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		AF2565691DEBAA9A00509228 /* Safe DrinksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Safe DrinksUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF25656D1DEBAA9A00509228 /* Safe_DrinksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Safe_DrinksUITests.swift; sourceTree = "<group>"; };
 		AF25656F1DEBAA9A00509228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF25657B1DEBB73F00509228 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AF2565831DEBC20E00509228 /* AddUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
+		AF2565851DEBC23600509228 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		AF2565871DEBC26300509228 /* BeginSafelyDrinkingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeginSafelyDrinkingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,10 @@
 				AF2565541DEBAA9A00509228 /* Assets.xcassets */,
 				AF2565561DEBAA9A00509228 /* LaunchScreen.storyboard */,
 				AF2565591DEBAA9A00509228 /* Info.plist */,
+				AF25657B1DEBB73F00509228 /* User.swift */,
+				AF2565831DEBC20E00509228 /* AddUserViewController.swift */,
+				AF2565851DEBC23600509228 /* HistoryViewController.swift */,
+				AF2565871DEBC26300509228 /* BeginSafelyDrinkingViewController.swift */,
 			);
 			path = "Safe Drinks";
 			sourceTree = "<group>";
@@ -260,7 +272,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF2565501DEBAA9A00509228 /* ViewController.swift in Sources */,
+				AF2565841DEBC20E00509228 /* AddUserViewController.swift in Sources */,
 				AF25654E1DEBAA9A00509228 /* AppDelegate.swift in Sources */,
+				AF2565861DEBC23600509228 /* HistoryViewController.swift in Sources */,
+				AF2565881DEBC26300509228 /* BeginSafelyDrinkingViewController.swift in Sources */,
+				AF25657C1DEBB73F00509228 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +521,7 @@
 				AF2565741DEBAA9A00509228 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF2565751DEBAA9A00509228 /* Build configuration list for PBXNativeTarget "Safe DrinksTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +530,7 @@
 				AF2565771DEBAA9A00509228 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF2565781DEBAA9A00509228 /* Build configuration list for PBXNativeTarget "Safe DrinksUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +539,7 @@
 				AF25657A1DEBAA9A00509228 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
