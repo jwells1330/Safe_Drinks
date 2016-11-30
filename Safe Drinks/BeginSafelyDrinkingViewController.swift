@@ -14,6 +14,8 @@ class BeginSafelyDrinkingViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var bacLabel: UILabel!
     @IBOutlet weak var drinkCounterLabel: UILabel!
+    
+    var counter = 0;
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,9 @@ class BeginSafelyDrinkingViewController: UIViewController {
     }
 
     @IBAction func addSameDrink(_ sender: UIButton) {
+        counter += 1
+        
+        drinkCounterLabel.text = "You have had \(counter) drinks tonight"
     }
     
 
