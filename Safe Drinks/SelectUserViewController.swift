@@ -1,19 +1,14 @@
 //
-//  BeginSafelyDrinkingViewController.swift
+//  SelectUserViewController.swift
 //  Safe Drinks
 //
-//  Created by Jake Wells on 11/27/16.
+//  Created by Sarah Allen on 11/30/16.
 //  Copyright © 2016 Allen, Ashwell, and Wells. All rights reserved.
 //
 
 import UIKit
 
-class BeginSafelyDrinkingViewController: UIViewController {
-    
-    
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var bacLabel: UILabel!
-    @IBOutlet weak var drinkCounterLabel: UILabel!
+class SelectUserViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +16,9 @@ class BeginSafelyDrinkingViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func addSameDrink(_ sender: UIButton) {
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
 

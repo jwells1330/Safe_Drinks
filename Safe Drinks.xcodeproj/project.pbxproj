@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		197497411DEF5F4800169692 /* SelectUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197497401DEF5F4800169692 /* SelectUserViewController.swift */; };
 		AF25654E1DEBAA9A00509228 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25654D1DEBAA9A00509228 /* AppDelegate.swift */; };
 		AF2565501DEBAA9A00509228 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25654F1DEBAA9A00509228 /* ViewController.swift */; };
 		AF2565531DEBAA9A00509228 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2565511DEBAA9A00509228 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		197497401DEF5F4800169692 /* SelectUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserViewController.swift; sourceTree = "<group>"; };
 		AF25654A1DEBAA9A00509228 /* Safe Drinks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Safe Drinks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF25654D1DEBAA9A00509228 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF25654F1DEBAA9A00509228 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				AF2565831DEBC20E00509228 /* AddUserViewController.swift */,
 				AF2565851DEBC23600509228 /* HistoryViewController.swift */,
 				AF2565871DEBC26300509228 /* BeginSafelyDrinkingViewController.swift */,
+				197497401DEF5F4800169692 /* SelectUserViewController.swift */,
 			);
 			path = "Safe Drinks";
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				AF2565501DEBAA9A00509228 /* ViewController.swift in Sources */,
 				AF2565841DEBC20E00509228 /* AddUserViewController.swift in Sources */,
 				AF25654E1DEBAA9A00509228 /* AppDelegate.swift in Sources */,
+				197497411DEF5F4800169692 /* SelectUserViewController.swift in Sources */,
 				AF2565861DEBC23600509228 /* HistoryViewController.swift in Sources */,
 				AF2565881DEBC26300509228 /* BeginSafelyDrinkingViewController.swift in Sources */,
 				AF25657C1DEBB73F00509228 /* User.swift in Sources */,
