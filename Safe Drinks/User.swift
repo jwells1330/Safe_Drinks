@@ -10,9 +10,12 @@ import Foundation
 
 class User{
     var name: String
+    var weight: Int
+    var history: [Date] = []
     
-    init(_ name:String){
+    init(_ name:String, _ weight:Int){
         self.name = name
+        self.weight = weight
     }
     
     func getName() -> String{
@@ -31,4 +34,15 @@ class Users{
     func getUsers() -> [User]{
         return users
     }
+}
+
+class Date{
+    var drinks: Int
+    var BAC: Double
+    
+    init(_ drinks:Int, _ BAC:Double){
+        self.drinks = drinks
+        self.BAC = BAC
+    }
+    
 }

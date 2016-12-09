@@ -10,9 +10,10 @@ import UIKit
 
 class AddUserViewController: UIViewController {
     
-    @IBOutlet weak var addNewUserButton: UIButton!
+    var defaults: UserDefaults = UserDefaults.standard
+    var userCount: Int = 0
+    
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var weightTextField: UITextField!
     
 
@@ -21,4 +22,8 @@ class AddUserViewController: UIViewController {
         
     }
 
+    @IBAction func addUser(_ sender: Any) {
+        let newUser = User(nameTextField.text!, Int(weightTextField.text!)!)
+        defaults.set(newUser, forKey: "/(userCount)")
+    }
 }
