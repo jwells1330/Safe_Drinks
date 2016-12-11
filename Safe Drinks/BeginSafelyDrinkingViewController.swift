@@ -73,6 +73,13 @@ class BeginSafelyDrinkingViewController: UIViewController {
         history.append(dateObj)
         defaults.set(archiveHistory(), forKey: "\(userName)History")
         
+        if dateObj.BAC > 0.06 && dateObj.BAC < 0.08{
+            let alert = UIAlertController(title: "Warning", message: "Please don't drive.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
+        }
+        
     }
         func archiveHistory() -> NSData{
             let archivedArray = NSKeyedArchiver.archivedData(withRootObject: history as NSArray)
