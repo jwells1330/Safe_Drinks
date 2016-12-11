@@ -15,29 +15,67 @@ class BeginSafelyDrinkingViewController: UIViewController {
     @IBOutlet weak var bacLabel: UILabel!
     @IBOutlet weak var drinkCounterLabel: UILabel!
     
-    var counter = 0;
+    var userName: String = ""
+    var defaults: UserDefaults = UserDefaults.standard
+
+    var dateObj = DateObject(0,0,NSDate())
+    var weight = 0
+    var female = true
+    
+    var history: [DateObject] = []
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    @IBAction func addSameDrink(_ sender: UIButton) {
-        counter += 1
+        nameLabel.text = userName
+        let user = getUser()
+        weight = user.getWeight()
+        female = user.getFemale()
         
-        drinkCounterLabel.text = "You have had \(counter) drinks tonight"
+        if defaults.object(forKey: "\(userName)History") == nil{
+            defaults.set(history, forKey: "\(userName)History")
+        }else{
+            let archivedHistory = defaults.object(forKey: "\(userName)History") as? NSData
+            history = (NSKeyedUnarchiver.unarchiveObject(with: archivedHistory as! Data) as? [DateObject])!
+        }
+        
+        
+        var stillDrinking = false
+        
+        for dateObject in history{
+            if Calendar.current.component(.day, from: Date()) == Calendar.current.component(.day, from: dateObject.date as Date){
+                dateObj = dateObject
+                stillDrinking = true
+            }
+        }
+        if !stillDrinking{
+        history.append(dateObj)
+        }else{
+            drinkCounterLabel.text = "You have had \(dateObj.getDrink()) drink(s)"
+            bacLabel.text = "Estimated BAC is \(dateObj.getBAC())"
+        }
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func getUser() -> User{
+        let decoded = defaults.object(forKey: "\(userName)") as! Data
+        let user = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! User
+        return user
     }
-    */
 
+    @IBAction func addDrink(_ sender: Any) {
+        dateObj.addDrink()
+        dateObj.setBAC(weight, female)
+        drinkCounterLabel.text = "You have had \(dateObj.getDrink()) drink(s)"
+        bacLabel.text = "Estimated BAC is \(dateObj.getBAC())"
+        
+        history.removeLast()
+        history.append(dateObj)
+        defaults.set(archiveHistory(), forKey: "\(userName)History")
+        
+    }
+        func archiveHistory() -> NSData{
+            let archivedArray = NSKeyedArchiver.archivedData(withRootObject: history as NSArray)
+            return archivedArray as NSData
+        }
 }

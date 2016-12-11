@@ -9,54 +9,37 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    var users = Users()
     
-    @IBOutlet weak var DropDownTable: UITableView!
+    var defaults: UserDefaults = UserDefaults.standard
+    var userNames: [String] = []
+    var userName = "Please Select a User"
+    @IBOutlet weak var selectedUser: UILabel!
     
-    @IBAction func selectUserButton(_ sender: UIButton) {
-        displayUsers()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            tester()
+        if defaults.object(forKey: "userNames") == nil{
+            defaults.set(userNames, forKey: "userNames")
+        }else{
+            userNames = defaults.object(forKey: "userNames") as! [String]
         }
-
+        selectedUser.text = userName
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    
-    func displayUsers(){
-        for user in users.getUsers(){
-            let userTableCell = UITableViewCell()
-            userTableCell.textLabel?.text = user.getName()
-            DropDownTable.addSubview(userTableCell)
-        }
-        DropDownTable.isHidden = false
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showBeginDrinkingView"{
+            let destination = segue.destination as! BeginSafelyDrinkingViewController
+            destination.userName = self.userName
     }
-    
-    func tester(){
-        let test = User("Jake")
-        users.addUser(test)
     }
-    
-    
-    //let indexpath = DropDownTable.indexPathForSelectedRow
-    //let currentCell = DropDownTable.cellForRow(at: indexpath!)! as UITableViewCell
-    //currentCell.backgroundColor = UIColor.blue
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        let indexPath = DropDownTable.indexPathForSelectedRow //optional, to get from any UIButton for example
-        
-        let currentCell = DropDownTable.cellForRow(at: indexPath!)! as UITableViewCell
-        
-        currentCell.backgroundColor = UIColor.blue
+    @IBAction func reset(_ sender: Any) {
+        userNames.removeAll()
+        defaults.set(userNames, forKey: "userNames")
     }
-    
-    
 }
 
