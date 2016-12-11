@@ -31,7 +31,6 @@ class AddUserViewController: UIViewController {
         }else{
              female = true
         }
-//        let newUser = User(nameTextField.text!, Int(weightTextField.text!)!, female, history)
         let newUser = User(nameTextField.text!, Int(weightTextField.text!)!, female)
         userNames = defaults.object(forKey: "userNames") as! [String]
         userNames.append(newUser.getName())

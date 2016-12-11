@@ -10,6 +10,12 @@ import UIKit
 
 class HistoryViewController: UIViewController {
 
+    @IBOutlet weak var dateStack: UIStackView!
+    @IBOutlet weak var BACStack: UIStackView!
+    @IBOutlet weak var drinksStack: UIStackView!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
