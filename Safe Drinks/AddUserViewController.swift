@@ -10,9 +10,8 @@ import UIKit
 
 class AddUserViewController: UIViewController {
     
-    @IBOutlet weak var addNewUserButton: UIButton!
+
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var weightTextField: UITextField!
     
 
