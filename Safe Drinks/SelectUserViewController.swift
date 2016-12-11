@@ -97,6 +97,7 @@ class SelectUserViewController: UIViewController {
         if segue.identifier == "userSelectedSegue"{
             let destination = segue.destination as! ViewController
             destination.userName = selectedUser.text!
+            destination.userSelected = true
         }
     }
 }

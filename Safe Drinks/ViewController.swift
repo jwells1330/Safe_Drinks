@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var userNames: [String] = []
     var userName = "Please Select a User"
     @IBOutlet weak var selectedUser: UILabel!
+    var userSelected = false
     
     
     override func viewDidLoad() {
@@ -44,6 +45,15 @@ class ViewController: UIViewController {
     @IBAction func reset(_ sender: Any) {
         userNames.removeAll()
         defaults.set(userNames, forKey: "userNames")
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if userSelected {
+            return true;
+        }else{
+            
+            return false;
+        }
     }
 }
 
