@@ -18,21 +18,45 @@ class BeginSafelyDrinkingViewController: UIViewController {
     var userName: String = ""
     var defaults: UserDefaults = UserDefaults.standard
 
-    let dateObj = DateObject(0,0,Date())
+    var dateObj = DateObject(0,0,NSDate())
+    var weight = 0
+    var female = true
+    
+    var history: [DateObject] = []
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLabel.text = userName
         let user = getUser()
-        user.addToHistory(dateObj)
+        weight = user.getWeight()
+        female = user.getFemale()
+        
+        if defaults.object(forKey: "\(userName)History") == nil{
+            defaults.set(history, forKey: "\(userName)History")
+        }else{
+            let archivedHistory = defaults.object(forKey: "\(userName)History") as? NSData
+            history = (NSKeyedUnarchiver.unarchiveObject(with: archivedHistory as! Data) as? [DateObject])!
+        }
+        
+        
+        var stillDrinking = false
+        
+        for dateObject in history{
+            if Calendar.current.component(.day, from: Date()) == Calendar.current.component(.day, from: dateObject.date as Date){
+                dateObj = dateObject
+                stillDrinking = true
+            }
+        }
+        if !stillDrinking{
+        history.append(dateObj)
+        }else{
+            drinkCounterLabel.text = "You have had \(dateObj.getDrink()) drink(s)"
+            bacLabel.text = "Estimated BAC is \(dateObj.getBAC())"
+        }
         
     }
-
-    @IBAction func addSameDrink(_ sender: UIButton) {
-        
-        drinkCounterLabel.text = "You have had \(dateObj.getDrink()) drinks tonight"
-    }
+    
     func getUser() -> User{
         let decoded = defaults.object(forKey: "\(userName)") as! Data
         let user = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! User
@@ -40,5 +64,18 @@ class BeginSafelyDrinkingViewController: UIViewController {
     }
 
     @IBAction func addDrink(_ sender: Any) {
+        dateObj.addDrink()
+        dateObj.setBAC(weight, female)
+        drinkCounterLabel.text = "You have had \(dateObj.getDrink()) drink(s)"
+        bacLabel.text = "Estimated BAC is \(dateObj.getBAC())"
+        
+        history.removeLast()
+        history.append(dateObj)
+        defaults.set(archiveHistory(), forKey: "\(userName)History")
+        
     }
+        func archiveHistory() -> NSData{
+            let archivedArray = NSKeyedArchiver.archivedData(withRootObject: history as NSArray)
+            return archivedArray as NSData
+        }
 }
