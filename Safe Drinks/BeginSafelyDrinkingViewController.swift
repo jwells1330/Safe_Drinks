@@ -15,29 +15,30 @@ class BeginSafelyDrinkingViewController: UIViewController {
     @IBOutlet weak var bacLabel: UILabel!
     @IBOutlet weak var drinkCounterLabel: UILabel!
     
-    var counter = 0;
+    var userName: String = ""
+    var defaults: UserDefaults = UserDefaults.standard
+
+    let dateObj = DateObject(0,0,Date())
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        nameLabel.text = userName
+        let user = getUser()
+        user.addToHistory(dateObj)
+        
     }
 
     @IBAction func addSameDrink(_ sender: UIButton) {
-        counter += 1
         
-        drinkCounterLabel.text = "You have had \(counter) drinks tonight"
+        drinkCounterLabel.text = "You have had \(dateObj.getDrink()) drinks tonight"
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func getUser() -> User{
+        let decoded = defaults.object(forKey: "\(userName)") as! Data
+        let user = NSKeyedUnarchiver.unarchiveObject(with: decoded) as! User
+        return user
     }
-    */
 
+    @IBAction func addDrink(_ sender: Any) {
+    }
 }

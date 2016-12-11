@@ -11,7 +11,7 @@ import UIKit
 class AddUserViewController: UIViewController {
     
     var defaults: UserDefaults = UserDefaults.standard
-    var userCount: Int = 0
+    var userNames: [String] = []
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var weightTextField: UITextField!
@@ -19,11 +19,14 @@ class AddUserViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
-    @IBAction func addUser(_ sender: Any) {
+    @IBAction func addUser(_ sender: Any) { 
         let newUser = User(nameTextField.text!, Int(weightTextField.text!)!)
-        defaults.set(newUser, forKey: "/(userCount)")
+        userNames = defaults.object(forKey: "userNames") as! [String]
+        userNames.append(newUser.getName())
+        defaults.set(userNames, forKey: "userNames")
+        let encodedUser: Data = NSKeyedArchiver.archivedData(withRootObject: newUser)
+        defaults.set(encodedUser, forKey: "\(newUser.getName())")
     }
 }

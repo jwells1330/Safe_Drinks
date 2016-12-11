@@ -9,25 +9,37 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    var users = Users()
+    
+    var defaults: UserDefaults = UserDefaults.standard
+    var userNames: [String] = []
+    var userName = "Please Select a User"
+    @IBOutlet weak var selectedUser: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            tester()
+        if defaults.object(forKey: "userNames") == nil{
+            defaults.set(userNames, forKey: "userNames")
+        }else{
+            userNames = defaults.object(forKey: "userNames") as! [String]
         }
-
+        selectedUser.text = userName
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    
-    func tester(){
-        let test = User("Jake", 230)
-        users.addUser(test)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showBeginDrinkingView"{
+            let destination = segue.destination as! BeginSafelyDrinkingViewController
+            destination.userName = self.userName
     }
-    
-    
+    }
+    @IBAction func reset(_ sender: Any) {
+        userNames.removeAll()
+        defaults.set(userNames, forKey: "userNames")
+    }
 }
 
