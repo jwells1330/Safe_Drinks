@@ -15,6 +15,7 @@ class BeginSafelyDrinkingViewController: UIViewController {
     @IBOutlet weak var bacLabel: UILabel!
     @IBOutlet weak var drinkCounterLabel: UILabel!
     
+    @IBOutlet weak var warningLabel: UILabel!
     var userName: String = ""
     var defaults: UserDefaults = UserDefaults.standard
 
@@ -78,6 +79,8 @@ class BeginSafelyDrinkingViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             
             self.present(alert, animated: true, completion: nil)
+            
+            warningLabel.text = "Please don't drive."
         }
         
     }
