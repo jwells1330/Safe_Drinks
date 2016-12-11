@@ -14,7 +14,7 @@ class SelectUserViewController: UIViewController {
     var userNames: [String] = []
 
     var yPos: CGFloat = 0
-    let spacing: CGFloat = 0
+    let spacing: CGFloat = 2
 
     @IBOutlet weak var nameStackView: UIStackView!
     @IBOutlet weak var selectedUser: UILabel!
@@ -48,7 +48,7 @@ class SelectUserViewController: UIViewController {
     func addUserButton(_ user: User){
         
         // how tall is each label
-        let buttonHeight = nameStackView.frame.height 
+        let buttonHeight = nameStackView.frame.height / 5
         if counter <= 4 {
         // create a label
         let button = UIButton(frame: CGRect(x: 0, y: yPos, width: nameStackView.frame.width, height: buttonHeight))

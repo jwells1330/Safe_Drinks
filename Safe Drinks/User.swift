@@ -109,9 +109,11 @@ class DateObject: NSObject, NSCoding{
         let hoursElapsed = Calendar.current.component(.hour, from: Date()) - Calendar.current.component(.hour, from: date as Date)
         
         BAC = rawBAC - (Double(hoursElapsed) * 0.015)
+        BAC = round(BAC * 100) / 100
         
     }
     func getBAC() -> Double{
+        
         return BAC
     }
     
