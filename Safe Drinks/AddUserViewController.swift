@@ -9,16 +9,13 @@
 import UIKit
 
 class AddUserViewController: UIViewController {
-    
-<<<<<<< HEAD
 
-=======
     var defaults: UserDefaults = UserDefaults.standard
     var userNames: [String] = []
     var history: [DateObject] = []
     @IBOutlet weak var sexSlider: UISegmentedControl!
     
->>>>>>> 61dad6f40cfcf7072230dfd07d7c95bb912a79a2
+
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var weightTextField: UITextField!
 
