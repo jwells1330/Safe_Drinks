@@ -14,10 +14,12 @@ class SelectUserViewController: UIViewController {
     var userNames: [String] = []
 
     var yPos: CGFloat = 0
-    let spacing: CGFloat = 20
+    let spacing: CGFloat = 2
 
     @IBOutlet weak var nameStackView: UIStackView!
     @IBOutlet weak var selectedUser: UILabel!
+    
+    var counter = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,13 +48,13 @@ class SelectUserViewController: UIViewController {
     func addUserButton(_ user: User){
         
         // how tall is each label
-        let buttonHeight = nameStackView.frame.height
-        
+        let buttonHeight = nameStackView.frame.height / 5
+        if counter <= 4 {
         // create a label
         let button = UIButton(frame: CGRect(x: 0, y: yPos, width: nameStackView.frame.width, height: buttonHeight))
 
         // look-and-feel of the label
-        button.backgroundColor = UIColor.gray
+        button.backgroundColor = UIColor.lightGray
         button.setTitle(user.getName(), for: .normal)
         button.setTitleColor(UIColor.red, for: .normal)
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
@@ -60,6 +62,7 @@ class SelectUserViewController: UIViewController {
         nameStackView.addArrangedSubview(button)
 
         yPos += buttonHeight + spacing
+        }
     }
     
     func buttonAction(sender: UIButton!){
