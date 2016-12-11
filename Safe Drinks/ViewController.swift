@@ -35,7 +35,11 @@ class ViewController: UIViewController {
         if segue.identifier == "showBeginDrinkingView"{
             let destination = segue.destination as! BeginSafelyDrinkingViewController
             destination.userName = self.userName
-    }
+        } else if (segue.identifier == "showHistory"){
+            let destination = segue.destination as! HistoryViewController
+            destination.userName = self.userName
+        }
+        
     }
     @IBAction func reset(_ sender: Any) {
         userNames.removeAll()
