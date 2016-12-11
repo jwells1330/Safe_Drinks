@@ -25,18 +25,32 @@ class AddUserViewController: UIViewController {
     }
 
     @IBAction func addUser(_ sender: Any) {
+        let alert = UIAlertController(title: "Weight", message: "Please Enter a valid weight.", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        
         var female: Bool
         if sexSlider.selectedSegmentIndex == 0{
              female = false
         }else{
              female = true
         }
-//        let newUser = User(nameTextField.text!, Int(weightTextField.text!)!, female, history)
-        let newUser = User(nameTextField.text!, Int(weightTextField.text!)!, female)
-        userNames = defaults.object(forKey: "userNames") as! [String]
-        userNames.append(newUser.getName())
-        defaults.set(userNames, forKey: "userNames")
-        let encodedUser: Data = NSKeyedArchiver.archivedData(withRootObject: newUser)
-        defaults.set(encodedUser, forKey: "\(newUser.getName())")
+        if Int(weightTextField.text!) != nil{
+            let newUser = User(nameTextField.text!, Int(weightTextField.text!)!, female)
+            userNames = defaults.object(forKey: "userNames") as! [String]
+            userNames.append(newUser.getName())
+            defaults.set(userNames, forKey: "userNames")
+            let encodedUser: Data = NSKeyedArchiver.archivedData(withRootObject: newUser)
+            defaults.set(encodedUser, forKey: "\(newUser.getName())")
+        }else{
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if Int(weightTextField.text!) != nil{
+            return true;
+        }else{
+            return false;
+        }
     }
 }
