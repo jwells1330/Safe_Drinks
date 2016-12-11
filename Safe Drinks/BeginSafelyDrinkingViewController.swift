@@ -73,13 +73,30 @@ class BeginSafelyDrinkingViewController: UIViewController {
         history.append(dateObj)
         defaults.set(archiveHistory(), forKey: "\(userName)History")
         
-        if dateObj.BAC > 0.06 && dateObj.BAC < 0.08{
+        if dateObj.BAC >= 0.06 && dateObj.BAC <= 0.08{
             let alert = UIAlertController(title: "Warning", message: "Please don't drive.", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             
             self.present(alert, animated: true, completion: nil)
         }
-        
+        if dateObj.BAC >= 0.18 && dateObj.BAC <= 0.23{
+            let alert2 = UIAlertController(title: "Warning", message: "Please stop drinking.", preferredStyle: UIAlertControllerStyle.alert)
+            alert2.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            
+            self.present(alert2, animated: true, completion: nil)
+        }
+        if dateObj.BAC >= 0.23 && dateObj.BAC <= 0.28{
+            let alert3 = UIAlertController(title: "Warning", message: "Please consider calling 911.", preferredStyle: UIAlertControllerStyle.alert)
+            alert3.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            
+            self.present(alert3, animated: true, completion: nil)
+        }
+        if dateObj.BAC >= 0.28 {
+            let alert4 = UIAlertController(title: "Warning", message: "Call 911.", preferredStyle: UIAlertControllerStyle.alert)
+            alert4.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            
+            self.present(alert4, animated: true, completion: nil)
+        }
     }
         func archiveHistory() -> NSData{
             let archivedArray = NSKeyedArchiver.archivedData(withRootObject: history as NSArray)
