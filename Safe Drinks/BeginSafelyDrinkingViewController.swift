@@ -87,18 +87,24 @@ class BeginSafelyDrinkingViewController: UIViewController {
             alert2.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             
             self.present(alert2, animated: true, completion: nil)
+            
+            warningLabel.text = "Please stop drinking."
         }
         if dateObj.BAC >= 0.23 && dateObj.BAC <= 0.28{
             let alert3 = UIAlertController(title: "Warning", message: "Please consider calling 911.", preferredStyle: UIAlertControllerStyle.alert)
             alert3.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             
             self.present(alert3, animated: true, completion: nil)
+            
+            warningLabel.text = "Please consider calling 911."
         }
         if dateObj.BAC >= 0.28 {
             let alert4 = UIAlertController(title: "Warning", message: "Call 911.", preferredStyle: UIAlertControllerStyle.alert)
             alert4.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             
             self.present(alert4, animated: true, completion: nil)
+            
+            warningLabel.text = "CALL 911."
         }
     }
         func archiveHistory() -> NSData{
