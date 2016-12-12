@@ -48,11 +48,17 @@ class ViewController: UIViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if userSelected {
-            return true;
+        if identifier == "showBeginDrinkingView" || identifier == "showHistory"{
+            if userSelected {
+                return true;
+            }else{
+                let alert = UIAlertController(title: "Select User", message: "Please Select a User", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                return false;
+            }
         }else{
-            
-            return false;
+            return true;
         }
     }
 }

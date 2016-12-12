@@ -14,8 +14,9 @@ class BeginSafelyDrinkingViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var bacLabel: UILabel!
     @IBOutlet weak var drinkCounterLabel: UILabel!
-    
     @IBOutlet weak var warningLabel: UILabel!
+    
+    
     var userName: String = ""
     var defaults: UserDefaults = UserDefaults.standard
 
@@ -50,11 +51,14 @@ class BeginSafelyDrinkingViewController: UIViewController {
             }
         }
         if !stillDrinking{
-        history.append(dateObj)
+            history.append(dateObj)
+            warningLabel.text = ""
         }else{
             drinkCounterLabel.text = "You have had \(dateObj.getDrink()) drink(s)"
             bacLabel.text = "Estimated BAC is \(dateObj.getBAC())"
+            alertUser()
         }
+        
         
     }
     
@@ -74,6 +78,15 @@ class BeginSafelyDrinkingViewController: UIViewController {
         history.append(dateObj)
         defaults.set(archiveHistory(), forKey: "\(userName)History")
         
+        alertUser()
+    }
+    
+    func archiveHistory() -> NSData{
+            let archivedArray = NSKeyedArchiver.archivedData(withRootObject: history as NSArray)
+            return archivedArray as NSData
+    }
+    
+    func alertUser(){
         if dateObj.BAC >= 0.06 && dateObj.BAC <= 0.08{
             let alert = UIAlertController(title: "Warning", message: "Please don't drive.", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
@@ -106,9 +119,6 @@ class BeginSafelyDrinkingViewController: UIViewController {
             
             warningLabel.text = "CALL 911."
         }
+
     }
-        func archiveHistory() -> NSData{
-            let archivedArray = NSKeyedArchiver.archivedData(withRootObject: history as NSArray)
-            return archivedArray as NSData
-        }
 }
