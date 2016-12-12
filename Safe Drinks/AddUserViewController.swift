@@ -46,6 +46,8 @@ class AddUserViewController: UIViewController {
         }
     }
     
+
+    
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if Int(weightTextField.text!) != nil{
             return true;
