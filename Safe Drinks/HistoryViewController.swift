@@ -21,7 +21,9 @@ class HistoryViewController: UIViewController {
     var formatter = DateFormatter()
     
     var yPos: CGFloat = 0
-    let spacing: CGFloat = 20
+    let spacing: CGFloat = 3
+    
+    
     
     
     override func viewDidLoad() {
@@ -53,7 +55,7 @@ class HistoryViewController: UIViewController {
     func displayDate(_ dateString: String){
         
         // how tall is each label
-        let labelHeight = dateStack.frame.height
+        let labelHeight = dateStack.frame.height / 10
         
         // create a label
         let label = UILabel(frame: CGRect(x: 0, y: yPos, width: dateStack.frame.width, height: labelHeight))
@@ -73,6 +75,7 @@ class HistoryViewController: UIViewController {
         // how tall is each label
         let labelHeight = dateStack.frame.height
         
+        
         // create a label
         let label = UILabel(frame: CGRect(x: 0, y: yPos, width: dateStack.frame.width, height: labelHeight))
         
@@ -83,6 +86,7 @@ class HistoryViewController: UIViewController {
         
         // add the label to the stack view
         drinksStack.addArrangedSubview(label)
+        
     }
     
     func displayBAC(_ BAC: Double){
