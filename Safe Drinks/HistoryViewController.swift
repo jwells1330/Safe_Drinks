@@ -14,6 +14,7 @@ class HistoryViewController: UIViewController {
     @IBOutlet weak var BACStack: UIStackView!
     @IBOutlet weak var drinksStack: UIStackView!
 
+    @IBOutlet weak var nameLabel: UILabel!
     
     var userName = ""
     var defaults: UserDefaults = UserDefaults.standard
@@ -34,7 +35,7 @@ class HistoryViewController: UIViewController {
         
         print("1")
         
-        //nameLabel.text = userName
+        nameLabel.text = userName
         
         dateStack.spacing = spacing
         BACStack.spacing = spacing
@@ -64,7 +65,7 @@ class HistoryViewController: UIViewController {
         let label = UILabel(frame: CGRect(x: 0, y: yPos, width: dateStack.frame.width, height: labelHeight))
         
         // look-and-feel of the label
-        label.backgroundColor = UIColor.gray
+        label.backgroundColor = UIColor.lightGray
         label.text = dateString
         label.textColor = UIColor.red
         
@@ -83,7 +84,7 @@ class HistoryViewController: UIViewController {
         let label = UILabel(frame: CGRect(x: 0, y: yPos, width: dateStack.frame.width, height: labelHeight))
         
         // look-and-feel of the label
-        label.backgroundColor = UIColor.gray
+        label.backgroundColor = UIColor.lightGray
         label.text = "\(drinks)"
         label.textColor = UIColor.red
         
@@ -100,7 +101,7 @@ class HistoryViewController: UIViewController {
         let label = UILabel(frame: CGRect(x: 0, y: yPos, width: dateStack.frame.width, height: labelHeight))
         
         // look-and-feel of the label
-        label.backgroundColor = UIColor.gray
+        label.backgroundColor = UIColor.lightGray
         label.text = "\(BAC)"
         label.textColor = UIColor.red
         
