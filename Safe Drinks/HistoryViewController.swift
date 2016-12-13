@@ -13,8 +13,8 @@ class HistoryViewController: UIViewController {
     @IBOutlet weak var dateStack: UIStackView!
     @IBOutlet weak var BACStack: UIStackView!
     @IBOutlet weak var drinksStack: UIStackView!
+
     
-    @IBOutlet weak var nameLabel: UILabel!
     var userName = ""
     var defaults: UserDefaults = UserDefaults.standard
     var history: [DateObject] = []
@@ -28,10 +28,13 @@ class HistoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(userName)
         let archivedHistory = defaults.object(forKey: "\(userName)History") as? NSData
         history = (NSKeyedUnarchiver.unarchiveObject(with: archivedHistory as! Data) as? [DateObject])!
         
-        nameLabel.text = userName
+        print("1")
+        
+        //nameLabel.text = userName
         
         dateStack.spacing = spacing
         BACStack.spacing = spacing
