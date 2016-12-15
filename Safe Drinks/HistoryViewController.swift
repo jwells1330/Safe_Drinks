@@ -9,11 +9,11 @@
 import UIKit
 
 class HistoryViewController: UIViewController {
-
+    
     @IBOutlet weak var dateStack: UIStackView!
     @IBOutlet weak var BACStack: UIStackView!
     @IBOutlet weak var drinksStack: UIStackView!
-
+    
     @IBOutlet weak var nameLabel: UILabel!
     
     var userName = ""
@@ -31,27 +31,36 @@ class HistoryViewController: UIViewController {
         super.viewDidLoad()
         print(userName)
         let archivedHistory = defaults.object(forKey: "\(userName)History") as? NSData
-        history = (NSKeyedUnarchiver.unarchiveObject(with: archivedHistory as! Data) as? [DateObject])!
-        
-        print("1")
-        
-        nameLabel.text = userName
-        
-        dateStack.spacing = spacing
-        BACStack.spacing = spacing
-        drinksStack.spacing = spacing
-        
-        for dateObj in history {
-            formatter.dateStyle = .short
-            formatter.timeStyle = .short
+        if archivedHistory != nil{
+            history = (NSKeyedUnarchiver.unarchiveObject(with: archivedHistory as! Data) as? [DateObject])!
             
-            let dateString = formatter.string(from: dateObj.date as Date)
-            displayDate(dateString)
-            displayDrinks(dateObj.drinks)
-            displayBAC(dateObj.BAC)
+            
+            print("1")
+            
+            nameLabel.text = userName
+            
+            dateStack.spacing = spacing
+            BACStack.spacing = spacing
+            drinksStack.spacing = spacing
+            
+            for dateObj in history {
+                formatter.dateStyle = .short
+                
+                let dateString = formatter.string(from: dateObj.date as Date)
+                print(dateString)
+                displayDate(dateString)
+                displayDrinks(dateObj.drinks)
+                let bac = dateObj.BAC
+                let BAC = round(bac * 100) / 100
+                displayBAC(BAC)
+            }
+        }else{
+            let alert = UIAlertController(title: "No History", message: "This User Has No History", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -68,6 +77,7 @@ class HistoryViewController: UIViewController {
         label.backgroundColor = UIColor.lightGray
         label.text = dateString
         label.textColor = UIColor.red
+        label.textAlignment = .center
         
         // add the label to the stack view
         dateStack.addArrangedSubview(label)
@@ -87,6 +97,7 @@ class HistoryViewController: UIViewController {
         label.backgroundColor = UIColor.lightGray
         label.text = "\(drinks)"
         label.textColor = UIColor.red
+        label.textAlignment = .center
         
         // add the label to the stack view
         drinksStack.addArrangedSubview(label)
@@ -104,6 +115,7 @@ class HistoryViewController: UIViewController {
         label.backgroundColor = UIColor.lightGray
         label.text = "\(BAC)"
         label.textColor = UIColor.red
+        label.textAlignment = .center
         
         // add the label to the stack view
         BACStack.addArrangedSubview(label)
